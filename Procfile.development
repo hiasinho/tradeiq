@@ -1,0 +1,2 @@
+web: bundle exec jekyll serve
+client: npm run build:development

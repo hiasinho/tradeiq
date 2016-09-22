@@ -1,23 +1,28 @@
 {% include base_path %}
 
 <div class="masthead">
+  <div class="masthead__menu">
+    <nav id="site-nav" class="main-nav">
+      <ul>
+        <li class="masthead__menu-item masthead__menu-item--lg brand">
+          <a href="{{ base_path }}/">Trade<span>IQ</span></a>
+        </li>
+        {% for link in site.data.navigation.main %}
+          {% if link.url contains 'http' %}
+            {% assign domain = '' %}
+            {% else %}
+            {% assign domain = base_path %}
+          {% endif %}
+          <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+
   <div class="masthead__inner-wrap">
-    <div class="masthead__menu">
-      <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
-        <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-              {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
-          {% endfor %}
-        </ul>
-        <ul class="hidden-links hidden"></ul>
-      </nav>
+    <div class="hero">
+      <h1 class="title--hero">Solutions for a globalized world</h1>
+      <h2 class="subtitle--hero">Some super cool slogan to rule the trading world, bro</h2>
     </div>
   </div>
 </div>
