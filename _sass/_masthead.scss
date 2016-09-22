@@ -8,9 +8,8 @@
 
 .masthead {
   position: relative;
-  border-bottom: 1px solid $border-color;
   z-index: 20;
-  background-image: url('/images/cargo1.png');
+  background-image: image-url('cargo2.jpg');
   background-position: center;
   background-size: cover;
   height: 600px;
@@ -22,7 +21,8 @@
     content: " ";
     display: block;
     position: absolute;
-    background-image: url('/images/wave.png');
+    background-image: image-url('wave.png');
+
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,14 +1,13 @@
 ---
 ---
 
-/*
- *    Minimal Mistakes Jekyll Theme
- *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
- *
-*/
+{% include base_path %}
+
+$image-base-path: "{{ base_path }}/images";
+
+@function image-url($file) {
+  @return url('#{$image-base-path}/#{$file}');
+}
 
 @import "vendor/bourbon/bourbon";
 @import "vendor/breakpoint/breakpoint"; // media query mixins
