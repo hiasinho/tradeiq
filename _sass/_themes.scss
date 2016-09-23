@@ -1,0 +1,8 @@
+.theme {
+
+  &--smoky {
+    $background: $lighter-gray;
+
+    background: $background;
+  }
+}

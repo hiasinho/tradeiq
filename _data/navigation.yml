@@ -12,5 +12,12 @@ main:
   - title: "Services"
     url: "/#services"
 
+  - title: "Style"
+    url: "/style"
+
+sub:
   - title: "Contact"
     url: "/#contact"
+
+  - title: "Sign in"
+    url: "/#signin"

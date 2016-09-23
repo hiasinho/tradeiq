@@ -10,15 +10,16 @@
     {% include head/custom.html %}
   </head>
 
-  <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+  <body class="{% if page.theme %}{{ page.theme | prepend: 'theme--' }}{% endif %}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
 
     {% include browser-upgrade.html %}
-    {% include masthead.html %}
+    <div class="header header--landing">
+      {% include header.html %}
+    </div>
 
     {{ content }}
 
-    <footer class="footer" role="contentinfo">
-      {% include footer/custom.html %}
+    <footer class="footer theme--smoky">
       {% include footer.html %}
     </footer>
 

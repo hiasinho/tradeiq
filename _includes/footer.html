@@ -1,39 +1,40 @@
 {% include base_path %}
 
-<div class="footer-logo">
-  <img src="{{ base_path }}/images/logo.png" alt="Logo image">
-</div>
-<div class="footer-links">
-  <ul>
-    <li><h3>Content</h3></li>
-    <li><a href="javascript:void(0)">About</a></li>
-    <li><a href="javascript:void(0)">Contact</a></li>
-    <li><a href="javascript:void(0)">Products</a></li>
-  </ul>
-  <ul>
-    {% if site.data.ui-text[site.locale].follow_label %}
-      <li><h3>{{ site.data.ui-text[site.locale].follow_label }}</h3></li>
-    {% endif %}
-    {% if site.twitter.username %}
-      <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
-    {% endif %}
-    {% if site.facebook.username %}
-      <li><a href="https://facebook.com/{{ site.facebook.username }}"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
-    {% endif %}
-    {% if site.author.github %}
-      <li><a href="http://github.com/{{ site.author.github }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
-    {% endif %}
-    {% if site.author.bitbucket %}
-      <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}"><i class="fa fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
-    {% endif %}
-  </ul>
-  <ul>
-    <li><h3>Legal</h3></li>
-    <li><a href="javascript:void(0)">Terms and Conditions</a></li>
-    <li><a href="javascript:void(0)">Privacy Policy</a></li>
-  </ul>
-</div>
+<div class="footer__container">
+  <div class="footer__body">
+    <div class="footer__links">
+      <ul>
+        <li><h3>Content</h3></li>
+        <li><a href="javascript:void(0)">About</a></li>
+        <li><a href="javascript:void(0)">Contact</a></li>
+        <li><a href="javascript:void(0)">Products</a></li>
+      </ul>
+      <ul>
+        {% if site.data.ui-text[site.locale].follow_label %}
+          <li><h3>{{ site.data.ui-text[site.locale].follow_label }}</h3></li>
+        {% endif %}
+        {% if site.twitter.username %}
+          <li><a href="https://twitter.com/{{ site.twitter.username }}"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        {% endif %}
+        {% if site.facebook.username %}
+          <li><a href="https://facebook.com/{{ site.facebook.username }}"><i class="fa fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        {% endif %}
+        {% if site.author.github %}
+          <li><a href="http://github.com/{{ site.author.github }}"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        {% endif %}
+        {% if site.author.bitbucket %}
+          <li><a href="http://bitbucket.org/{{ site.author.bitbucket }}"><i class="fa fa-fw fa-bitbucket" aria-hidden="true"></i> Bitbucket</a></li>
+        {% endif %}
+      </ul>
+      <ul>
+        <li><h3>Legal</h3></li>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
+    </div>
 
-<hr>
+    <hr>
 
-<p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</p>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</p>
+  </div>
+</div>

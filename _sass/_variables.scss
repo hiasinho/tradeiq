@@ -1,127 +1,116 @@
-/* ==========================================================================
-   Variables
-   ========================================================================== */
+// Typography
+$serif: Georgia, Times, serif;
+$sans-serif: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
 
-/*
-   Typography
-   ========================================================================== */
+$open-sans: "Open Sans";
 
-$doc-font-size              : 16;
+$base-font-family: $open-sans, $sans-serif;
+$heading-font-family: $open-sans, $sans-serif;
 
-/* paragraph indention */
-$paragraph-indent           : false; // true, false (default)
-$indent-var                 : 1.3em;
+// Font Sizes
+$base-font-size: em(16);
+$small-font-size: $base-font-size * 0.75;
 
-/* system typefaces */
-$serif                      : Georgia, Times, serif;
-$sans-serif                 : -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$monospace                  : Monaco, Consolas, "Lucida Console", monospace;
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.1;
 
-/* sans serif typefaces */
-$sans-serif-narrow          : $sans-serif;
-$helvetica                  : Helvetica, "Helvetica Neue", Arial, sans-serif;
-$open-sans                  : "Open Sans";
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
 
-/* serif typefaces */
-$georgia                    : Georgia, serif;
-$times                      : Times, serif;
-$bodoni                     : "Bodoni MT", serif;
-$calisto                    : "Calisto MT", serif;
-$garamond                   : Garamond, serif;
-
-$global-font-family         : $open-sans, $sans-serif;
-$header-font-family         : $open-sans, $sans-serif;
-$caption-font-family        : $open-sans, $sans-serif;
-
-/* type scale */
-$type-size-0                : 3.25em;   // ~52px
-$type-size-1                : 2.441em;  // ~39.056px
-$type-size-2                : 1.953em;  // ~31.248px
-$type-size-3                : 1.563em;  // ~25.008px
-$type-size-4                : 1.25em;   // ~20px
-$type-size-5                : 1em;      // ~16px
-$type-size-6                : 0.75em;   // ~12px
-$type-size-7                : 0.6875em; // ~11px
-$type-size-8                : 0.625em;  // ~10px
+$type-size-0: 3.25em;   // ~52px
+$type-size-1: 2.441em;  // ~39.056px
+$type-size-2: 1.953em;  // ~31.248px
+$type-size-3: 1.563em;  // ~25.008px
+$type-size-4: 1.25em;   // ~20px
+$type-size-5: 1em;      // ~16px
+$type-size-6: 0.75em;   // ~12px
+$type-size-7: 0.6875em; // ~11px
+$type-size-8: 0.625em;  // ~10px
 
 
-/*
-   Colors
-   ========================================================================== */
+// Colors
+$gray: #7a8288;
+$dark-gray: mix(#000, $gray, 40%);
+$darker-gray: mix(#000, $gray, 60%);
+$light-gray: mix(#fff, $gray, 50%);
+$lighter-gray: mix(#fff, $gray, 90%);
 
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
-$lighter-gray               : mix(#fff, $gray, 90%);
+$body-color: #fff;
+$background-color: #fff;
+$code-background-color: #fafafa;
+$code-background-color-dark: $light-gray;
+$text-color: $dark-gray;
+$border-color: $lighter-gray;
 
-$body-color                 : #fff;
-$background-color           : #fff;
-$code-background-color      : #fafafa;
-$code-background-color-dark : $light-gray;
-$text-color                 : $dark-gray;
-$border-color               : $lighter-gray;
+$primary-color: #46afdf;
+$secondary-color: #22c127;
+$success-color: #62c462;
+$warning-color: #f89406;
+$danger-color: #ee5f5b;
+$info-color: #52adc8;
 
-$primary-color              : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
-$danger-color               : #ee5f5b;
-$info-color                 : #52adc8;
+$brand-primary-color: $primary-color;
+$brand-secondary-color: $secondary-color;
 
-$brand-primary-color        : #46afdf;
-$brand-secondary-color      : #22c127;
+// Font Colors
+$base-font-color: $dark-gray;
+$action-color: $primary-color;
 
-$tradeiq-blue-color         : $brand-primary-color;
+// Border
+$base-border-color: $light-gray;
+$base-border-radius: 1px;
+$base-border: 1px solid $base-border-color;
 
-/* brands */
-$behance-color              : #1769FF;
-$dribbble-color             : #ea4c89;
-$facebook-color             : #3b5998;
-$flickr-color               : #ff0084;
-$foursquare-color           : #0072b1;
-$github-color               : #171516;
-$google-plus-color          : #dd4b39;
-$instagram-color            : #517fa4;
-$lastfm-color               : #d51007;
-$linkedin-color             : #007bb6;
-$pinterest-color            : #cb2027;
-$rss-color                  : #fa9b39;
-$soundcloud-color           : #ff3300;
-$stackoverflow-color        : #fe7a15;
-$tumblr-color               : #32506d;
-$twitter-color              : #55acee;
-$vimeo-color                : #1ab7ea;
-$vine-color                 : #00bf8f;
-$youtube-color              : #bb0000;
-$xing-color                 : #006567;
+// Box Shadow
+$base-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 
+// Background Colors
+$base-background-color: #f9f9f9;
+$secondary-background-color: tint($base-border-color, 75%);
 
-/* links */
-$link-color                 : $info-color;
-$link-color-hover           : mix(#000, $link-color, 25%);
-$link-color-visited         : mix(#fff, $link-color, 25%);
+// Brand Colors
+$behance-color: #1769FF;
+$dribbble-color: #ea4c89;
+$facebook-color: #3b5998;
+$flickr-color: #ff0084;
+$foursquare-color: #0072b1;
+$github-color: #171516;
+$google-plus-color: #dd4b39;
+$instagram-color: #517fa4;
+$lastfm-color: #d51007;
+$linkedin-color: #007bb6;
+$pinterest-color: #cb2027;
+$rss-color: #fa9b39;
+$soundcloud-color: #ff3300;
+$stackoverflow-color: #fe7a15;
+$tumblr-color: #32506d;
+$twitter-color: #55acee;
+$vimeo-color: #1ab7ea;
+$vine-color: #00bf8f;
+$youtube-color: #bb0000;
+$xing-color: #006567;
 
+$link-color: $info-color;
+$link-color-hover: mix(#000, $link-color, 25%);
+$link-color-visited: mix(#fff, $link-color, 25%);
 
-/*
-   Breakpoints
-   ========================================================================== */
-
+// Breakpoints
 @include breakpoint-set("to ems", true);
 
-$small                      : 600px;
-$medium                     : 768px;
-$medium-wide                : 900px;
-$large                      : 1024px;
-$x-large                    : 1280px;
+$small: 600px;
+$medium: 768px;
+$medium-wide: 900px;
+$large: 1024px;
+$x-large: 1280px;
 
-
-/*
-   Grid
-   ========================================================================== */
-
-$right-sidebar-width-narrow : 200px;
-$right-sidebar-width        : 300px;
-$right-sidebar-width-wide   : 400px;
+// Grid
+$right-sidebar-width-narrow: 200px;
+$right-sidebar-width: 300px;
+$right-sidebar-width-wide: 400px;
 
 $susy: (
   columns: 12,
@@ -140,22 +129,10 @@ $susy: (
   // ),
 );
 
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 
-/*
-   Masthead
-   ========================================================================== */
-
-$masthead-color             : $lighter-gray;
-$masthead-link-color        : $lighter-gray;
-$masthead-link-color-hover  : white;
-$masthead-border            : 1px solid rgba($lighter-gray, 0.25);
-
-/*
-   Other
-   ========================================================================== */
-
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$global-transition          : all 0.2s ease-in-out;
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;

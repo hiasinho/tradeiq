@@ -1,0 +1,38 @@
+{% include base_path %}
+
+<div class="header__nav">
+  <nav class="nav nav--main">
+    <li>
+      <a href="{{ base_path }}/">Trade<span>IQ</span></a>
+    </li>
+    {% for link in site.data.navigation.main %}
+      {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+        {% else %}
+        {% assign domain = base_path %}
+      {% endif %}
+      <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+  </nav>
+  <nav class="nav nav--sub">
+    {% for link in site.data.navigation.sub %}
+      {% if link.url contains 'http' %}
+        {% assign domain = '' %}
+        {% else %}
+        {% assign domain = base_path %}
+      {% endif %}
+      <li><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+    {% endfor %}
+    <li>
+      <a href="#" class="nav__btn">Sign up</a>
+    </li>
+  </nav>
+</div>
+
+<div class="header__content">
+  <div class="hero hero--lead">
+    <h1 class="hero__title">Solutions for a globalized world</h1>
+    <h2 class="hero__subtitle">Some super cool slogan to rule the trading world, bro</h2>
+    <a href="#" class="btn">Try it today</a>
+  </div>
+</div>

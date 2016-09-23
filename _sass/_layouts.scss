@@ -1,0 +1,81 @@
+@mixin section-layout() {
+  &__container {
+    @include container;
+  }
+
+  &__body {
+    @include full;
+    @include pad($base-spacing);
+  }
+}
+
+// Header
+.header {
+  background-blend-mode: multiply;
+  background-color: rgba(darken($primary-color, 30), 1);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  position: relative;
+  z-index: 20;
+
+  &__nav {
+    @include container;
+    position: relative;
+    z-index: 20;
+
+    nav {
+      padding: 5px 0;
+
+      &:nth-child(1) {
+        @include first();
+        float: left;
+      }
+
+      &:nth-child(2) {
+        @include last();
+      }
+    }
+  }
+
+  &__content {
+    @include container;
+
+    padding-top: 160px;
+
+    // @include breakpoint($x-large) {
+    //   max-width: $x-large;
+    // }
+  }
+
+  &:after {
+    background-image: image-url('wave.png');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &--landing {
+    background-image: image-url('cargo2.jpg');
+  }
+}
+
+// Partners
+.section {
+  @include section-layout;
+
+  // @include breakpoint($x-large) {
+  //   max-width: $x-large;
+  // }
+}
+
+.footer {
+  @include section-layout;
+}

@@ -5,10 +5,6 @@
 
 $image-base-path: "{{ base_path }}/images";
 
-@function image-url($file) {
-  @return url('#{$image-base-path}/#{$file}');
-}
-
 @import "vendor/bourbon/bourbon";
 @import "vendor/breakpoint/breakpoint"; // media query mixins
 @import "variables";
@@ -17,25 +13,11 @@ $image-base-path: "{{ base_path }}/images";
 
 @import "vendor/normalize/normalize";
 @import "base";
-
-// @import "utilities";
-// @import "animations";
-// @import "tables";
-// @import "buttons";
-// @import "notices";
-@import "masthead";
-@import "navigation";
-// @import "footer";
-// @import "syntax";
-
-// @import "forms";
-
-// @import "page";
-// @import "archive";
-// @import "sidebar";
-
+@import "layouts";
+@import "components";
+@import "utilities";
+@import "themes";
 @import "shame";
 
 @import "vendor/font-awesome/font-awesome";
 @import "vendor/magnific-popup/magnific-popup";
-@import "print";
