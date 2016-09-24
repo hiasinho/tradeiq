@@ -12,7 +12,7 @@
 // Header
 .header {
   background-blend-mode: multiply;
-  background-color: rgba(darken($primary-color, 30), 1);
+  background-color: rgba(darken($primary-color, 30), 0.8);
   background-position: center;
   background-size: cover;
   height: 600px;
@@ -48,18 +48,33 @@
     // }
   }
 
-  &:after {
-    background-image: image-url('wave.svg');
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
-    bottom: 0;
-    content: " ";
-    display: block;
-    height: 100%;
+  &__border {
     position: absolute;
     width: 100%;
-    z-index: -1;
+    bottom: 0;
+  }
+
+  &__wave {
+    position: absolute;
+    bottom: 0;
+
+    > g {
+      stroke: none;
+      stroke-width: 1;
+      fill: none;
+      fill-rule: evenodd;
+      fill-opacity: 0.4;
+    }
+
+    path {
+      &:nth-child(1), &:nth-child(2) {
+        fill: $secondary-color;
+      }
+
+      &:nth-child(3), &:nth-child(4) {
+        fill: $primary-color;
+      }
+    }
   }
 
   &--landing {
@@ -70,10 +85,32 @@
 // Partners
 .section {
   @include section-layout;
+  padding: 116px 0 120px 0;
+
+  &__header {
+    @include full();
+    margin-bottom: $base-spacing * 4;
+  }
+
+  &__title {
+    @extend .h3;
+    text-align: center;
+    margin-bottom: 0;
+
+    &--sub {
+      @extend .h5;
+      margin-top: 0;
+      color: $light-gray;
+    }
+  }
 
   // @include breakpoint($x-large) {
   //   max-width: $x-large;
   // }
+}
+
+.services {
+  background-color: #f9f9f9;
 }
 
 .footer {
