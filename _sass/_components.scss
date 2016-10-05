@@ -117,6 +117,18 @@
         a {
           padding: 0;
           font-weight: 300;
+
+          &:before {
+            content: " ";
+            float: left;
+            display: inline-block;
+            width: 45px;
+            height: 36px;
+            background-image: image-url('logo_white.svg');
+            background-size: contain;
+            background-position: left center;
+            background-repeat: no-repeat;
+          }
         }
 
         span {
